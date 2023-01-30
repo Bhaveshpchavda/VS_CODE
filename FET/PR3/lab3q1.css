@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #F5F5F5;
+    padding: 20px;
+  }
+  
+  section {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  section label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  section input[type="text"], section input[type="number"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  section input[type="button"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  section input[type="button"]:hover {
+    background-color: #45a049;
+  }
+  
+  

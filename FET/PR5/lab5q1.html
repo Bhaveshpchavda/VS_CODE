@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfact Number</title>
+
+</head>
+<body>
+    <script>
+    function isPerfect() {
+        let number = document.getElementById("number").value;
+        let sum = 1;
+
+        for (let i = 2; i * i <= number; i++) 
+        {
+            if (number % i == 0) {
+                if (i * i != number)
+                    sum = sum + i + number / i;
+                else
+                    sum = sum + i;
+            }
+        }   
+
+        if (sum == number && number != 1) {
+            alert(number + " is a perfect number.");
+        } else {
+            alert(number + " is not a perfect number.");
+        }   
+    }
+    
+
+</script>
+<form action="">
+    Enter a number
+    <input type="number" id="number" value="1">
+    <input type="submit" onclick="isPerfect()" value="submit">
+</form>
+
+
+</body>
+</html>     
