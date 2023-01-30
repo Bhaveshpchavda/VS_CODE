@@ -1,0 +1,10 @@
+import time
+print("Welcome to the test\n")
+time.sleep(3)
+print("The test is going to start in 3 Seconds \n")
+time.sleep(3)
+start = time.time()
+print("What is the answer of 2+2")
+ans1 = int(input())
+print("What is the answer of 2*2")
+ans2 = int(input())
