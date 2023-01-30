@@ -9,35 +9,26 @@
 </head>
 <body>
     <script>
-    function isPerfect() {
-        let number = document.getElementById("number").value;
-        let sum = 1;
-
-        for (let i = 2; i * i <= number; i++) 
-        {
-            if (number % i == 0) {
-                if (i * i != number)
-                    sum = sum + i + number / i;
-                else
-                    sum = sum + i;
-            }
-        }   
-
-        if (sum == number && number != 1) {
-            alert(number + " is a perfect number.");
-        } else {
-            alert(number + " is not a perfect number.");
-        }   
-    }
-    
-
-</script>
+        let input = parseInt(prompt("Enter a number:"));
+        let nextPerfect = input;
+        while (!isPerfect(nextPerfect)) {
+            nextPerfect++;
+        }
+        alert("The next perfect number is " + nextPerfect);
+        function isPerfect(num) {
+            let sum = 0;
+            for (let i = 1; i < num; i++) {
+                if (num % i === 0) {
+                    sum += i;
+                }
+            } 
+            return sum === num;
+        }
+    </script>
+        
 <form action="">
-    Enter a number
-    <input type="number" id="number" value="1">
-    <input type="submit" onclick="isPerfect()" value="submit">
+   <input type="submit" onclick="isPerfect()" value="Run">
 </form>
-
 
 </body>
 </html>     
