@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // Function to shuffle the array content
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                // Generate random number
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            return array;
+            
+        }
+        // Function to get numbers from array
+        function values() {
+            const Original_arr = [NaN, 0, 15, false, -22, '', undefined, 47,, null];
+            res = (Original_arr.filter(item => item))
+            alert("Numeric values in Array: " + res);
+        }
+        // Function to show the result
+        function show() {
+            var arr = res
+            var arr1 = shuffleArray(arr)
+            alert("After shuffling: " + arr1)
+        }
+    </script>
+
+<form>
+    Given Array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
+   <input type="submit" value="Clean Array" onclick="values(),show()">
+       
+</form>
+
+</body>
+</html>
