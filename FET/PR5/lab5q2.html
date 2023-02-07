@@ -14,11 +14,10 @@ const employees = [
 { name: "Daxil", salary: 4000, workingDays: 23 },
 
 ];
-for (const employee of employees) {
-  const salary = employee.salary * employee.workingDays;
-  document.write(`${employee.name}'s salary: ${salary}<br>`);
+for (let i in employees) {
+  const salary = employees[i].salary * employees[i].workingDays;
+  document.write(`${employees[i].name}'s salary: ${salary}<br>`);
 }
-
 
 </script>
 </body>
