@@ -1,3 +1,4 @@
+// lab8.js
 let kayoPromise = new Promise(function(Resolve,Reject) {
      let health = prompt("Are you healthy or not? [Y/N]")
      
