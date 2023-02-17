@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      display: none;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .detail {
+      display: block;
+    }
+
+    #head-1,
+    #head-2,
+    #head-3,
+    #head-4,
+    #head-5 {
+      display: none;
+    }
+
+    h2 {
+      margin: 10px;
+      border: 3px solid black;
+    }
+  </style>
+  <script>
+    function Create(num) {
+      let id = "#head-" + num;
+      document.querySelector(id).style.display = 'block';
+      let i = 1;
+      while (i < 6) {
+        if (i == num) {
+          i += 1;
+          continue;
+        }
+        let id1 = "#head-" + i;
+        document.querySelector(id1).style.display = 'none';
+        i += 1;
+      }
+    }
+  </script>
 </head>
+
 <body>
-    
+  <div class="container">
+    <h2 onclick="Create(1)">HTML</h2>
+    <h2 onclick="Create(2)">CSS</h2>
+    <h2 onclick="Create(3)">JavaScript</h2>
+    <h2 onclick="Create(4)">DOM</h2>
+    <h2 onclick="Create(5)">DHTML</h2>
+  </div>
+  <div class="detail">
+    <h3 id="head-1">The HyperText Markup Language or HTML is the
+      standard markup language for
+      documents designed to be displayed in a web browser. It can be
+      assisted by
+      technologies such as Cascading Style Sheets and scripting
+      languages such as
+      JavaScript.</h3>
+    <h3 id="head-2">Cascading Style Sheets is a style sheet language
+      used for describing the presentation
+      of a document written in a markup language such as HTML or
+      XML. CSS is a
+      cornerstone technology of the World Wide Web, alongside HTML
+      and JavaScript.</h3>
+    <h3 id="head-3">JavaScript, often abbreviated as JS, is a
+      programming language that is one of the core
+      technologies of the World Wide Web, alongside HTML and CSS. As
+      of 2022, 98% of
+      websites use JavaScript on the client side for webpage
+      behavior, often incorporating
+      third-party libraries.</h3>
+    <h3 id="head-4">The Document Object Model is a cross-platform and
+      language-independent interface
+      that treats an XML or HTML document as a tree structure
+      wherein each node is an
+      object representing a part of the document. The DOM represents
+      a document with a
+      logical tree.</h3>
+    <h3 id="head-5">Dynamic HTML, or DHTML, is a term which was used
+      by some browser vendors to
+      describe the combination of HTML, style sheets and client-side
+      scripts that enabled the
+      creation of interactive and animated documents. The
+      application of DHTML was
+      introduced by Microsoft with the release of Internet Explorer
+      4 in 1997.</h3>
+  </div>
 </body>
+
 </html>
