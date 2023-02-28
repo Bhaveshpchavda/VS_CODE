@@ -43,6 +43,15 @@
 # for x in range(10):
 #     print(myfunc())
 
+l= []
+n = 5 
+for i in range(n):
+    a=int(input())
+    l.append(a)
+    
+print(l)
+ 
+
 
 # a = "I am Bhavesh"
 # b= "Bhavesh"
@@ -126,4 +135,21 @@
 # print(cardict.get('brand'))
 
 #  Sets
+# myset = {1,2,6,4,5,1,2,3,6,7,8,9,9,9,9,9,9,9,9,9,9}
+# print(type(myset))
+# myset1= set()
+# myset1.add(2)
+# myset1.add(3)
+# myset1.add(4)
+# myset1.add(5)
+# myset1.add(6)
+# myset1.add((9,8,7))
+# print(myset1)
+# myset1.remove(5)
+# print(myset1)
+# set2 = {1,2,3,'ict',(7,8)}
+# print(set2)
+
+# Variable Declaration
+
 
