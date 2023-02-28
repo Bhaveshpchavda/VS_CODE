@@ -43,13 +43,13 @@
 # for x in range(10):
 #     print(myfunc())
 
-l= []
-n = 5 
-for i in range(n):
-    a=int(input())
-    l.append(a)
-    
-print(l)
+# l= []
+# n = 5 
+# for i in range(n):
+#     a=int(input())
+#     l.append(a)
+
+# print(l)
  
 
 
