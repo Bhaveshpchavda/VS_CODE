@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Validating UI</title>
+
+    <!-- css file -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+   
+</head>
+
+<body>
+    <div class="center">
+        <h3>Validating UI</h3>
+        <form name="base" onsubmit="return validate()">
+
+            <div class="txt_field">
+                <input type="text" name="name" placeholder="Enter Your Full Name" id="id-name" oninput="validate_name()">
+                <span id="name-error"></span>
+            </div>
+
+            <div class="txt_field">
+                <input type="text" name="email" placeholder="Enter Your Email" id="id-mail" oninput="validate_mail()">
+                <span id="email-error"></span>
+            </div>
+
+            <div class="txt_field">
+                <input type="tel" name="contact" placeholder="Contact Number" id="id-phone" oninput="validate_phone()">
+                <span id="contact-error"></span>
+            </div>
+
+            <div class="txt_field">
+                <input type="tel" name="passwd" placeholder="Password" id="id-passwd" oninput="validate_passwd()">
+                <span id="passwd-error"></span>
+            </div>
+
+
+            <button onclick="return validate_form()">Submit</button>
+            <span id="sub-error"></span>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
