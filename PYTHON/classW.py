@@ -79,6 +79,25 @@
 #         return f"Name is {self.name}.mark is {self.marks}"
 #     pass
 
+# f = open('iofile.txt','r')
+# text = f.read()
+# print(text)
+# f.close()
+
+# for k in range(1,25,3):
+#  print(k)
+# M='University'
+# print(M[:-1])
+# print(type({}))
+# List=[6,1,2,3,8]
+# print(List.extend([11,4,3,5]))
+# print(List.pop(1))
+# print(List)
+# t=(1,2,3,4,3,8,9) 
+# for i in range(0,len(t),2):
+#     print(i)
+
+
 # bhavesh = student()
 # vimal=student()
 # bhavesh.marks=56
