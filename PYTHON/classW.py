@@ -50,8 +50,43 @@
 #     l.append(a)
 
 # print(l)
- 
+# a=int(input())
+# b=int(input())
+# def func(a,b):
+#     c=a*b
+#     print(c)
+# func(a,b)
 
+#------->> Sequnce Packing
+# def return_first_last_mid(name):
+#     return name[0], name[1:-1] , name[-1]
+
+# f,m,l = return_first_last_mid('alexzender')
+# print('First:',f)
+# print('mid:',m)
+# print('Last:',l)
+
+# evens=[2,4,6,8]
+# f,*m,=evens
+# print(f,m)
+
+# class student():
+#     def __init__(self,aname,amarks):
+#         self.name=aname
+#         self.marks=amarks
+
+#     def printdetail(self,):
+#         return f"Name is {self.name}.mark is {self.marks}"
+#     pass
+
+# bhavesh = student()
+# vimal=student()
+# bhavesh.marks=56
+# bhavesh.name="bhavesh"
+# vimal.marks=34
+# vimal.name="vimal"
+# vimal = student("Bhavesh",25)
+# print(vimal.marks)
 
 # a = "I am Bhavesh"
 # b= "Bhavesh"
