@@ -1,12 +1,13 @@
-def checkalphabet(alpha):
- alphabetlist = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
- for check in alphabetlist:
-  if check not in alpha.lower():
-   return False
- return True
-string = input()
-if(checkalphabet(string) == True):
- print("Yes it is a panagram")
+import string
+
+def is_pangram(sentence):
+    alphabet = set(string.ascii_lowercase)
+    return set(sentence.lower()) >= alphabet
+
+
+sentence = "The quick brown fox jumps over the lazy dog"
+if is_pangram(sentence):
+    print("The sentence is a pangram")
 else:
- print("No not a panagram")
- 
+    print("The sentence is not a pangram")
+    

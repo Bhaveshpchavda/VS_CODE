@@ -207,3 +207,10 @@
 # Variable Declaration
 
 
+# red_marbles = int(input())
+# green_marbles = int(input())
+
+# # Find the smaller value between red_marbles and green_marbles
+# min_marbles = print(min(red_marbles, green_marbles))
+
+
