@@ -1,3 +1,5 @@
+// script.js
+
 var nameError = document.getElementById('name-error');
 var emailError = document.getElementById('email-error');
 var contactError = document.getElementById('contact-error');
