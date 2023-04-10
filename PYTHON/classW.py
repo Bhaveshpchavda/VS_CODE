@@ -214,3 +214,31 @@
 # min_marbles = print(min(red_marbles, green_marbles))
 
 
+# import numpy as np
+# import pandas as pd
+# i = ['name','address','phone','email','website']
+# d = ['ICT', 'ahm',123, 'trk01@gnu.ac.in', 'ict.gnu.ac.in']
+
+# s = pd.Series(data=d,index=i)
+# print(s)
+
+
+
+# import matplotlib.pyplot as plt
+# # Data
+# labels = ['A', 'B', 'C', 'D'] # Labels for each pie slice
+# sizes = [15, 30, 45, 10] # Values for each pie slice
+# colors = ['r', 'g', 'b', 'y'] # Colors for each pie slice
+# # Plotting the pie chart
+# plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%')
+# # Adding a title
+# plt.title('Pie Chart Example')
+# # Display the chart
+# plt.show()
+
+# import matplotlib.pyplot as plt
+# values1 = [5,8,9,4,1,6,7,2,3,8]
+# values2 = [8,3,2,7,6,1,4,9,8,5]
+# plt.plot(range(1,11),values1,c='r',lw=1,ls='--',marker='>')
+# plt.plot(range(1,11),values2,c='b',lw=2,ls=':',marker='o')
+# plt.show()

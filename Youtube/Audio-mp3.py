@@ -10,7 +10,8 @@ video = yt.streams.filter(only_audio=True).first()
   
 
 # replace destination with the path where you want to save the downloaded file
-destination = "E:\HDK\BHAKTCHINTAMANI KATHA"
+# destination = "E:\HDK\BHAKTCHINTAMANI KATHA"
+destination = "E:\Youtube Download\download"
   
 # download the file
 out_file = video.download(output_path=destination)
