@@ -13,6 +13,8 @@
 #         def getfare():
 #             print(f"Enter fare ")
 
+
+
 # import random 
 # r = random.randint(1,20)
 
@@ -242,3 +244,5 @@
 # plt.plot(range(1,11),values1,c='r',lw=1,ls='--',marker='>')
 # plt.plot(range(1,11),values2,c='b',lw=2,ls=':',marker='o')
 # plt.show()
+
+import matplotlib.pyplot as plt 
