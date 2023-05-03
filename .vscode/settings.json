@@ -45,5 +45,6 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     },
-    "python.formatting.provider": "yapf"
+    "python.formatting.provider": "yapf",
+    "liveServer.settings.port": 5501
 }
