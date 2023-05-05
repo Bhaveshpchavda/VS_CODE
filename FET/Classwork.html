@@ -1,166 +1,62 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
   <title>Class Work</title>
-   <script src="classwork.js" ></script> -->
-  <!-- <script>
-    // let user = {
-    //   name: "John",
-    //   age: 30,
-    //   isAdmin: true
-    // };
+  <script src="classwork.js"></script>
+  <script>
+    let user = {
+      name: "John",
+      age: 30,
+      isAdmin: true
+    };
 
-    // for (let key in user) {   // let prop in user
+    for (let key in user) {   // let prop in user
 
-    //   alert(key);  		// name, age, isAdmin
-    //   alert(user[key]);		 // John, 30, true
-    // }
-    // // pop
-    // let fruits = ["Apple", "Orange", "Pear"];
-    // alert(fruits.pop()); // remove "Pear" and alert it
+      alert(key);  		// name, age, isAdmin
+      alert(user[key]);		 // John, 30, true
+    }
+    // pop
+    let fruits = ["Apple", "Orange", "Pear"];
+    alert(fruits.pop()); // remove "Pear" and alert it
 
-    // alert(fruits); // Apple, Orange
-    // push
-    // let fruits = ["Apple", "Orange"];
+    alert(fruits); // Apple, Orange
+    push
+    let fruits = ["Apple", "Orange"];
 
-    // fruits.push("Pear");
+    fruits.push("Pear");
 
-    // alert(fruits); // Apple, Orange, Pear
+    alert(fruits); // Apple, Orange, Pear
 
-    //old way to iterate over an array
-    // let fruits = ["Apple", "Orange", "Pear"];
-    // for (let i = 0; i < fruits.length; i++) {
-    //   alert(fruits[i]);
-    // }
+    old way to iterate over an array
+    let fruits = ["Apple", "Orange", "Pear"];
+    for (let i = 0; i < fruits.length; i++) {
+      alert(fruits[i]);
+    }
 
-    //by for-of loop
-    // let fruits = ["Apple", "Orange", "Plum"];
-    // for (let i of fruits)  // or for(let fruit of fruits)
-    // { alert(i); }
+    by for-of loop
+    let fruits = ["Apple", "Orange", "Plum"];
+    for (let i of fruits)  // or for(let fruit of fruits)
+    { alert(i); }
 
-      
-  </script> -->
 
-<!-- </head> -->
+  </script>
 
-<!-- <body> -->
+</head>
 
-  <!-- <button> -->
-    <!-- <button onclick="fruits()"> Run </button> -->
-  <!-- </button> -->
+<body>
 
-  <!-- Decktopus Presentation -->
-  <!-- <div style="position: relative; padding-top: 56.25%; overflow: hidden">
-    <iframe allowfullscreen src="https://decktop.us/nlGkVHUWP?embedded=true" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height:100%; border:none">
+  <button>
+    <button onclick="fruits()"> Run </button>
+  </button>
+
+  Decktopus Presentation
+  <div style="position: relative; padding-top: 56.25%; overflow: hidden">
+    <iframe allowfullscreen src="https://decktop.us/nlGkVHUWP?embedded=true"
+      style="position: absolute; top: 0; left: 0; width: 100%; height:100%; border:none">
     </iframe>
-  </div> -->
-<!-- </body> -->
+  </div>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/-NONm-Jq34Y?list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p" title="L-1.12: User Level Vs Kernel Level Thread in Operating System | All Imp Points" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
 
-<!-- </html>  -->
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Flappy Bird</title>
-    <style>
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <canvas id="canvas" width="480" height="320"></canvas>
-    <script>
-      var canvas = document.getElementById("canvas");
-      var ctx = canvas.getContext("2d");
-      var bird = {
-        x: 100,
-        y: 200,
-        width: 50,
-        height: 40,
-        speed: 0,
-        gravity: 0.1,
-      };
-      var pipes = [
-        {
-          x: 500,
-          y: 0,
-          width: 50,
-          height: 100,
-          speed: 3,
-        },
-        {
-          x: 700,
-          y: 200,
-          width: 50,
-          height: 100,
-          speed: 3,
-        },
-      ];
-
-      function drawBird() {
-        ctx.fillStyle = "yellow";
-        ctx.fillRect(bird.x, bird.y, bird.width, bird.height);
-      }
-
-      function drawPipes() {
-        ctx.fillStyle = "green";
-        for (var i = 0; i < pipes.length; i++) {
-          ctx.fillRect(pipes[i].x, pipes[i].y, pipes[i].width, pipes[i].height);
-        }
-      }
-
-      function updateBird() {
-        bird.speed += bird.gravity;
-        bird.y += bird.speed;
-      }
-
-      function updatePipes() {
-        for (var i = 0; i < pipes.length; i++) {
-          pipes[i].x -= pipes[i].speed;
-          if (pipes[i].x + pipes[i].width < 0) {
-            pipes[i].x = canvas.width;
-          }
-        }
-      }
-
-      function checkCollision() {
-        for (var i = 0; i < pipes.length; i++) {
-          if (
-            bird.x < pipes[i].x + pipes[i].width &&
-            bird.x + bird.width > pipes[i].x &&
-            bird.y < pipes[i].y + pipes[i].height &&
-            bird.y + bird.height > pipes[i].y
-          ) {
-            return true;
-          }
-        }
-        if (bird.y < 0 || bird.y + bird.height > canvas.height) {
-          return true;
-        }
-        return false;
-      }
-
-      function gameLoop() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        drawBird();
-        drawPipes();
-        updateBird();
-        updatePipes();
-        if (checkCollision()) {
-          clearInterval(intervalId);
-        }
-      }
-
-      var intervalId = setInterval(gameLoop, 20);
-
-      document.addEventListener("keydown", function (event) {
-        if (event.keyCode == 32) {
-          bird.speed = -5;
-        }
-      });
-    </script>
-  </body>
 </html>
