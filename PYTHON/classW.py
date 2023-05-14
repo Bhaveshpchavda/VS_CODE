@@ -257,19 +257,21 @@
 # print(a.name , a.Work)
 # a.info()
 
-# class Person:
-#     def __init__(self ,n,w):
-#         self.name = n
-#         self.work = w 
+"""
+class Person:
+    def __init__(self ,n,w):
+        self.name = n
+        self.work = w 
 
-#     def info(self):
-#         print(f"{self.name} is {self.work}")
+    def info(self):
+        return f"{self.name} is {self.work}"
 
-# a = Person ("Bhavesh" , "Student")
-# b = Person("Sahil" , "ENgi")
-# a.info()
-# b.info()
+a = Person ("Bhavesh" , "Student")
+b = Person("Sahil" , "ENgi")
+print(a.info())
+print(b.info())
 
+""" 
 # class Employee:
 #     no_of_leaves = 8
 
@@ -375,3 +377,4 @@ import pandas as pd
 #         return 2
 
 # print(hello())
+
