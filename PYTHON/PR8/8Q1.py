@@ -3,7 +3,7 @@ class BankAccount:
         self.name = name
         self.acc_type = 'Current' if acc_type == 0 else 'Saving'
         self._balance = balance
-
+    
     def deposit(self, amount):
         if amount > 0:
             self._balance += amount

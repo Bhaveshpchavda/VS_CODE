@@ -9,6 +9,7 @@ with open(fname, 'r') as f:
   line_count += 1
  
  words = line.split()
+#  print(words)
  word_count += len(words)
  char_count += len(line)
  
