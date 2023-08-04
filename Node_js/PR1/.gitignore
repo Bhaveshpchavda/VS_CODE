@@ -1,0 +1,15 @@
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore editor-specific files and folders
+.vscode/
+*.log
+
+# Ignore macOS specific files
+# .DS_Store
+
+# Ignore Windows specific files
+Thumbs.db
+
+# Ignore any sensitive or private files (e.g., config files with sensitive information)
+
