@@ -1,3 +1,4 @@
+// Scripts.js
 let isBulbOn = false;
 
 function turnOn() {

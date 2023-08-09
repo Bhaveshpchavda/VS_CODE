@@ -1,4 +1,3 @@
-exports.currentdatetime=function curruntdate()
-{
-return Date();
+exports.currentdatetime=function currentdate(){
+ return Date();
 }

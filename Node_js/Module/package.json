@@ -1,7 +1,7 @@
 {
-  "name": "hello-npm-package",
+  "name": "package-datetime-002",
   "version": "1.0.0",
-  "description": "npm module to fetch current date",
+  "description": "Get date and time",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,6 @@
   "keywords": [
     "datetime"
   ],
-  "author": "Bhaveshpchavda",
+  "author": "Bhavesh CHavda",
   "license": "ISC"
 }

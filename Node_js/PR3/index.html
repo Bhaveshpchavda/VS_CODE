@@ -1,0 +1,76 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Revealer</title>
+  <style>
+    body {
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #1a1a1a;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #ff9800;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid #ff9800;
+  background-color: transparent;
+  color: #ff9800;
+  border-radius: 25px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #ff9800;
+}
+
+.datetime {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #fff;
+  border-top: 1px solid #ff9800;
+  padding-top: 15px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>The Mystical Clock</h1>
+    <button id="dateTimeButton">Unveil Time</button>
+    <div id="currentDateTime" class="datetime"></div>
+  </div>
+  <script>
+
+    document.getElementById('dateTimeButton').addEventListener('click', () => {
+  fetch('/getDateTime')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('currentDateTime').textContent = data;
+    })
+    .catch(error => {
+      console.error('Error fetching date and time:', error);
+    });
+});
+
+  </script>
+</body>
+</html>
