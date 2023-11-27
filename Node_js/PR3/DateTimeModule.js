@@ -1,9 +1,9 @@
 // DateTimeModule.js
 module.exports = {
     getCurrentDateTime: function () {
-    const currentDate = new Date();
-    const formattedDate = currentDate.toLocaleDateString();
-    const formattedTime = currentDate.toLocaleTimeString();
+    var  currentDate = new Date();
+    var  formattedDate = currentDate.toLocaleDateString();
+    var  formattedTime = currentDate.toLocaleTimeString();
     return `${formattedDate} ${formattedTime}`;
     }
     };

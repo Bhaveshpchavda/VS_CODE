@@ -55,6 +55,7 @@ body {
  
   
   form button[type="submit"],
+  form button[type="ALL Students"],
   form button[type="reset"] {
     background-color: #f17300;
     color: #fff;
@@ -67,7 +68,6 @@ body {
   }
   
   form button[type="submit"]:hover,
-  form button[type="ALL Students"],
   form button[type="reset"]:hover {
     background-color: #d36000;
   }

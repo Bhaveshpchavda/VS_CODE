@@ -4,10 +4,10 @@ var path = require("path");
 var bodyParser = require('body-parser');
 var app = express();
 var products = [
-    { id:1,name:'abc' },
-    { id:2,name:'xya'},
-    { id:3,name:'bnm'},
-    { id:4,name:'ytyt'}
+    { id:1,name:'Bhavesh' },
+    { id:2,name:'Jane'},
+    { id:3,name:'Smith'},
+    { id:4,name:'Bruce'}
 ];
 
 app.use(bodyParser.urlencoded({extended: false}));
@@ -41,10 +41,6 @@ app.post('/api/put', (req, res) => {
  var product = products.find(({ id }) => id == req.body.id);
     if (!product) res.status(404).send('<h2 style="font-family: Malgun Gothic; color: darkred;">Not Found!! </h2>');
     product.name = req.body.name;
-    //product.fn = req.body.fn;
-    //product.ln = req.body.ln;
-    //product.branch = req.body.branch;
-    //product.sub = req.body.sub;
     res.send(product);
 });
 
