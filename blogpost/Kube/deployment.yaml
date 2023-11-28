@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blogpost-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blogpost
+  template:
+    metadata:
+      labels:
+        app: blogpost
+    spec:
+      containers:
+      - name: blogpost-container
+        image: bhaveshpchavda/blogpost-b
+        ports:
+        - containerPort: 3000
+        
