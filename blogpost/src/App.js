@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
 import Login from "./pages/Login";
+import WatsonAssistantChat from "./WatsonAssistantChat";
 import { useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config";
@@ -32,6 +33,7 @@ function App() {
           </>
         )}
       </nav>
+      <WatsonAssistantChat /> {/* Use the WatsonAssistantChat component here */}
       <Routes>
         <Route path="/" element={<Home isAuth={isAuth} />} />
         <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
