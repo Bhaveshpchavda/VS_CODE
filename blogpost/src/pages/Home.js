@@ -3,7 +3,7 @@ import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
 
 function Home({ isAuth }) {
-  const [postList, setPostList] = useState([]);
+  const [postList, setPostList] = useState([]); 
   const postsCollectionRef = collection(db, "posts");
 
   const deletePost = async (id) => {
