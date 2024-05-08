@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function CreatePost({ isAuth }) {
   const [title, setTitle] = useState("");
-  const [postText, setPostText] = useState("");
+  const [postText, setPostText] = useState(""); 
 
   const postsCollectionRef = collection(db, "posts");
   let navigate = useNavigate();
