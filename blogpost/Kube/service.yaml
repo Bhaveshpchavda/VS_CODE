@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: blogpost
-  ports:
+  ports: 
     - protocol: TCP
       port: 80  # Expose on port 80 of the service
       targetPort: 3000  # Forward traffic to port 3000 on the pods
